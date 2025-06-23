@@ -718,6 +718,105 @@
                 color: black;
             }
         }
+    .forms-container3 {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+        flex-direction: row;
+    }
+
+    .contact-section {
+        order: 1;
+        flex: 1 1 350px;
+        min-width: 300px;
+        background: #1b1b1b;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
+        transition: box-shadow 0.3s, border-color 0.3s;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .contact-form {
+        order: 2;
+        flex: 1 1 350px;
+        min-width: 300px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
+        transition: box-shadow 0.3s, border-color 0.3s;
+        margin-bottom: 20px;
+    }
+
+    .contact-info h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #9f8eff;
+    }
+
+    .contact-box p, .response-box p {
+        margin: 5px 0;
+        color: #ddd;
+    }
+    .contact-box strong, .response-box strong {
+        color: #9f8eff;
+        font-weight: 600;
+    }
+    .contact-form input, .contact-form textarea {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        transition: border-color 0.3s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+        border-color: #9f8eff;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(159, 142, 255, 0.2);
+    }
+    .contact-form textarea {
+        height: 150px;
+        resize: vertical;
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder {
+        color: #ccc;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    .contact-form input:focus::placeholder, .contact-form textarea:focus::placeholder {
+        opacity: 0.6;
+        transition: opacity 0.3s;
+    }
+
+    @media (max-width: 900px) {
+        .forms-container3 {
+            flex-direction: column;
+            gap: 20px;
+            align-items: stretch;
+        }
+        .contact-form,
+        .contact-section {
+            min-width: 0;
+            width: 100%;
+            margin-bottom: 0;
+            order: unset;
+        }
+    }
+
+
+
+
     </style>
 </head>
 <body>
@@ -764,7 +863,7 @@
             <h2 id="about-heading" class="fade-in">About Me</h2>
             <div class="about-content">
                 <div class="about-text slide-in-left">
-                    <p>My name is <b> MD Mahfujor Rahman Roton </b>, a passionate and creative student currently studying in Class 10 at Joymontop High School. Having already passed the SSC examination, I continue to learn and grow each day—not just academically, but also through hands-on experience in the digital world. I come from a humble background, yet I strongly believe that innovation and creativity can thrive anywhere with curiosity and dedication. I specialize in building digital solutions that solve problems and inspire people. From crafting modern websites to experimenting with game development and app design, I am always eager to explore the latest technologies. Whether it’s front-end development or backend logic, I strive to push boundaries and bring ideas to life. With a deep interest in storytelling and user experience, I aim to blend design and functionality to create impactful, engaging platforms that people love to use.</p>
+                    <p style="font-size: 18px;">My name is <b> <strong style="font-size: 22px;">  MD Mahfujor Rahman Roton. </b> </strong>  a passionate and creative student currently studying in Class 10 at Joymontop High School. Having already passed the SSC examination, I continue to learn and grow each day—not just academically, but also through hands-on experience in the digital world. I come from a humble background, yet I strongly believe that innovation and creativity can thrive anywhere with curiosity and dedication. I specialize in building digital solutions that solve problems and inspire people. From crafting modern websites to experimenting with game development and app design, I am always eager to explore the latest technologies. Whether it’s front-end development or backend logic, I strive to push boundaries and bring ideas to life. With a deep interest in storytelling and user experience, I aim to blend design and functionality to create impactful, engaging platforms that people love to use.</p>
                     <p><strong>Education:</strong> SSC Passed, currently studying</p>
                     <p>I'm passionate about creating digital solutions that make a difference. From web development to game creation, I love exploring new technologies and pushing the boundaries of what's possible.</p>
                 </div>
@@ -799,10 +898,35 @@
                         <h3>Game Development</h3>
                         <p>Interactive game creation</p>
                     </div>
-                     <div class="card fade-in" role="listitem">
+                    <div class="card fade-in" role="listitem">
                         <i class="fas fa-c" aria-hidden="true"></i>
                         <h3>C</h3>
                         <p> developing system software and operating systems.</p>
+                    </div>
+                    <div class="card fade-in" role="listitem">
+                        <i class="fa-brands fa-github"></i>
+                        <h3>Github</h3>
+                        <p> GitHub is a platform for hosting, collaborating, and managing code with powerful version control.</p>
+                    </div>
+                    <div class="card fade-in" role="listitem">
+                        <i class="fab fa-node"></i>
+                        <h3>Node.js</h3>
+                        <p> Node.js is a fast, event-driven runtime for building scalable server-side applications with JavaScript.</p>
+                    </div>
+                    <div class="card fade-in" role="listitem">
+                        <i class="fa-brands fa-figma"></i>
+                        <h3>Figma</h3>
+                        <p> Figma is a collaborative design tool for creating user interfaces, prototypes, and visual content in real time.</p>
+                    </div>
+                    <div class="card fade-in" role="listitem">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>Database & Cloud</h3>
+                        <p> Database is a structured system to store and manage data efficiently, while cloud provides scalable online resources and services accessible via the internet.</p>
+                    </div>
+                    <div class="card fade-in" role="listitem">
+                       <i class="fa-solid fa-pen-nib"></i>
+                        <h3>UI/UX</h3>
+                        <p>UI/UX is the design process focused on creating intuitive, attractive interfaces (UI) and ensuring a seamless, enjoyable user experience (UX) for digital products.</p>
                     </div>
                 </div>
             </div>
@@ -860,7 +984,7 @@
                 </article>
                 <article class="project-card fade-in" role="listitem">
                     <h3>Tic-Tac-Toe Game</h3>
-                    <p>This polished web-based Tic‑Tac‑Toe game delivers a smooth and engaging player experience. Featuring a clean, minimalist grid interface, users can play as X or O with instant visual feedback and automatic win/draw detection. It tracks rounds and scores, ensuring a competitive edge across multiple games, all while adapting flawlessly to both desktop and mobile screens. Developed with pure HTML, CSS, and JavaScript, the game showcases real-time game logic, dynamic UI updates, and simple yet effective animations. Whether you're challenging a friend or testing your strategy, this app combines classic fun with modern web design—highlighting your ability to create responsive interactive applications.</p>
+                    <p>This polished web-based Tic-Tac-Toe game offers a clean, minimalist interface with real-time logic, automatic win/draw detection, and score tracking for a competitive experience. Built with HTML, CSS, and JavaScript, it features dynamic UI updates, smooth animations, and full responsiveness across desktop and mobile devices.</p>
                     <div class="tech-tags" aria-label="Technologies used">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">JavaScript</span>
@@ -940,6 +1064,16 @@
                     <h3>Web Design</h3>
                     <p>Creating beautiful and functional web designs that enhance user experience and engagement.</p>
                 </div>
+                <div class="card fade-in" role="listitem">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>database & cloud</h3>
+                    <p>Database is a structured system to store and manage data efficiently, while cloud provides scalable online resources and services accessible via the internet.</p>
+                </div>
+                <div class="card fade-in" role="listitem">
+                    <i class="fa-solid fa-server"></i>
+                    <h3>Backend Development</h3>
+                    <p>Backend development involves building and managing the server, database, and application logic that power the functionality behind websites and apps.</p>
+                </div>
             </div>
         </section>
 
@@ -964,23 +1098,77 @@
                     </a>
                 </div>
 
-                <form class="contact-form fade-in" aria-labelledby="contact-form-heading" novalidate>
-                    <h3 id="contact-form-heading" class="sr-only">Contact Form</h3>
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-                    </div>
-                    <button type="submit" class="cta-button" aria-describedby="form-status">Send Message</button>
-                    <div id="form-status" aria-live="polite" aria-atomic="true"></div>
-                </form>
+                <div class="forms-container3">
+                    
+                    <form class="contact-form fade-in" aria-labelledby="contact-form-heading" novalidate>
+                        <h3 id="contact-form-heading" class="sr-only">Contact Form</h3>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" aria-describedby="form-status">Send Message</button>
+                        <div id="form-status" aria-live="polite" aria-atomic="true"></div>
+                    </form>
+                    
+                    <section class="contact-section">
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <h2>Let's Connect</h2>
+                                <p>I’m always eager for new opportunities and exciting projects. Whether you’re hiring or looking to collaborate, I’d love to connect and hear from you.</p>
+                                <div class="contact-box" style="display: flex; flex-direction: column; gap: 18px; margin: 28px 0;">
+                                    <!-- Email -->
+                                    <div style="display: flex; align-items: center; background: rgba(159,142,255,0.08); border-radius: 10px; padding: 16px 20px; box-shadow: 0 2px 12px rgba(159,142,255,0.07); border: 1px solid rgba(159,142,255,0.18);">
+                                        <span style="background: linear-gradient(135deg,#9f8eff,#00d4ff); color: #fff; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-right: 18px; box-shadow: 0 2px 8px rgba(159,142,255,0.15);">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <div>
+                                            <div style="font-size: 1.05rem; color: #bdb6ff; font-weight: 600; letter-spacing: 0.5px;">Email</div>
+                                            <a href="mailto:mdhafizurrmanik@gmail.com" style="color:#9f8eff; text-decoration: none; font-size: 1.1rem; font-weight: 500; word-break: break-all; transition: color 0.2s;" aria-label="Send email to john@example.com" onmouseover="this.style.color='#00d4ff'" onmouseout="this.style.color='#9f8eff'">
+                                                Roton@example.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Phone -->
+                                    <div style="display: flex; align-items: center; background: rgba(159,142,255,0.08); border-radius: 10px; padding: 16px 20px; box-shadow: 0 2px 12px rgba(159,142,255,0.07); border: 1px solid rgba(159,142,255,0.18);">
+                                        <span style="background: linear-gradient(135deg,#9f8eff,#00d4ff); color: #fff; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-right: 18px; box-shadow: 0 2px 8px rgba(159,142,255,0.15);">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </span>
+                                        <div>
+                                            <div style="font-size: 1.05rem; color: #bdb6ff; font-weight: 600; letter-spacing: 0.5px;">Phone</div>
+                                            <a href="tel:+15551234567" style="color:#9f8eff; text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: color 0.2s;" aria-label="Call +1 (555) 123-4567" onmouseover="this.style.color='#00d4ff'" onmouseout="this.style.color='#9f8eff'">
+                                                +8801975506870
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Location -->
+                                    <div style="display: flex; align-items: center; background: rgba(159,142,255,0.08); border-radius: 10px; padding: 16px 20px; box-shadow: 0 2px 12px rgba(159,142,255,0.07); border: 1px solid rgba(159,142,255,0.18);">
+                                        <span style="background: linear-gradient(135deg,#9f8eff,#00d4ff); color: #fff; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-right: 18px; box-shadow: 0 2px 8px rgba(159,142,255,0.15);">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                        <div>
+                                            <div style="font-size: 1.05rem; color: #bdb6ff; font-weight: 600; letter-spacing: 0.5px;">Location</div>
+                                            <a href="https://www.google.com/maps/place/Joymontop/@23.8069464,90.1616732,4204m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x80859a6d00690021:0x4a501367f076adff!2sSan+Francisco,+CA,+USA!3b1!8m2!3d37.7749295!4d-122.4194155!16zL20vMGQ2bHA!3m5!1s0x3755ed06c264058b:0x330c3103197eb139!8m2!3d23.8069284!4d90.1811571!16s%2Fg%2F11g6yny3lf?entry=ttu&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style="color:#9f8eff; text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: color 0.2s;" aria-label="View location on Google Maps" onmouseover="this.style.color='#00d4ff'" onmouseout="this.style.color='#9f8eff'">
+                                                Joymontop, singair, manikganj
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="response-box" style="margin-top: 18px;">
+                                    <strong style="color:#00d4ff;">Quick Response Guarantee</strong>
+                                    <p style="color:#bdb6ff;">I typically respond to all inquiries within 24 hours. For urgent matters, feel free to call directly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
     </main>
