@@ -833,6 +833,8 @@
                 <li role="none"><a href="#portfolio" class="nav-link" role="menuitem">Project</a></li>
                 <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
                 <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+                
+
             </ul>
             <button class="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false">
                 <i class="fas fa-bars" aria-hidden="true"></i>
@@ -847,7 +849,7 @@
             <div class="particles" aria-hidden="true" id="particles"></div>
             <div class="hero-content fade-in">
                 <div class="profile-image" role="img" aria-label="Profile picture of Roton">
-                    <img src="489301441_647920371333350_1136077719379546366_n.jpg" alt="Profile photo of Roton" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    <img src="IMG_3928.jpg" alt="Profile photo of Roton" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                 </div>
 
                 <h1 id="hero-heading">Hi, I'm Roton</h1>
@@ -861,12 +863,18 @@
         <!-- About Section -->
         <section id="about" class="section" aria-labelledby="about-heading">
             <h2 id="about-heading" class="fade-in">About Me</h2>
-            <div class="about-content">
-                <div class="about-text slide-in-left">
+            <div class="about-content" style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+                <!-- Left: About Image (larger and on the left) -->
+                <div class="about-image slide-in-left" style="flex: 1 1 350px; min-width: 300px; display: flex; justify-content: center; align-items: flex-start;">
+                    <img src="IMG_3940.JPG" alt="Roton About Photo" style="width: 410px; height: 410px; object-fit: cover; border-radius: 24px; box-shadow: 0 12px 40px rgba(0,212,255,0.22); border: 5px solid #00d4ff;">
+                </div>
+                <!-- Right: About Text -->
+                <div class="about-text slide-in-right" style="flex: 2 1 300px; min-width: 250px;">
                     <p style="font-size: 16px;">Hi, I'm <b> <strong style="font-size: 20px;">  MD Mahfujor Rahman Roton. </b> </strong>  a passionate and creative student currently studying in Class 10 at Joymontop High School. Having already passed the SSC examination, I continue to learn and grow each day—not just academically, but also through hands-on experience in the digital world. I come from a humble background, yet I strongly believe that innovation and creativity can thrive anywhere with curiosity and dedication. I specialize in building digital solutions that solve problems and inspire people. From crafting modern websites to experimenting with game development and app design, I am always eager to explore the latest technologies. Whether it’s front-end development or backend logic, I strive to push boundaries and bring ideas to life. With a deep interest in storytelling and user experience, I aim to blend design and functionality to create impactful, engaging platforms that people love to use.</p>
                     <p><strong>Education:</strong> SSC Passed, currently studying</p>
                     <p>I'm passionate about creating digital solutions that make a difference. From web development to game creation, I love exploring new technologies and pushing the boundaries of what's possible.</p>
                 </div>
+            </div>
                 <div class="skills-grid slide-in-right" role="list" aria-label="Technical skills">
                     <div class="card fade-in" role="listitem">
                         <i class="fab fa-python" aria-hidden="true"></i>
@@ -1589,8 +1597,14 @@
         if ('performance' in window) {
             window.addEventListener('load', () => {
                 console.log('Page load time:', performance.now(), 'ms');
+                console.log('Total resources loaded:', performance.getEntriesByType('resource').length);
+                performance.getEntriesByType('resource').forEach(resource => {
+                    console.log(`Resource: ${resource.name}, Type: ${resource.initiatorType}, Duration: ${resource.duration} ms`);
+                });
+                
             });
         }
+    
     </script>
 </body>
 </html>
