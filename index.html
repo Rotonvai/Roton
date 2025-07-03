@@ -32,6 +32,7 @@
             --spacing-md: 2rem;
             --spacing-lg: 3rem;
             --spacing-xl: 4rem;
+            
         }
 
         /* Reset and base styles */
@@ -48,7 +49,11 @@
 
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-            background: var(--background-dark);
+            /* background: var(--background-dark); */
+           background-color: #000000;
+           background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+
+
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
@@ -814,8 +819,60 @@
         }
     }
 
+    .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+        }
+        
+        .step-line {
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #3b82f6);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .connecting-curve {
+            stroke-dasharray: 5, 5;
+            animation: dash 2s linear infinite;
+        }
+        
+        @keyframes dash {
+            to { stroke-dashoffset: -10; }
+        }
 
-
+         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes dash {
+            to { stroke-dashoffset: -10; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
 
     </style>
 </head>
@@ -885,6 +942,7 @@
         </section>
 
         <!-- About Section -->
+         
         <section id="about" class="section" aria-labelledby="about-heading">
             <h2 id="about-heading" class="fade-in">About Me</h2>
             <div class="about-content" style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
@@ -965,103 +1023,328 @@
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="section" aria-labelledby="portfolio-heading">
-            <h2 id="portfolio-heading" class="fade-in">Project</h2>
-            <div class="portfolio-grid" role="list" aria-label="Featured projects">
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Japanese N5 Language Website</h3>
-                    <p>Wrapped in a clean, mobile-friendly interface, this web app helps Bangladeshi learners tackle JLPT N5 Japanese—from hiragana and essential Kanji to core grammar and vocab. It offers bite‑sized lessons, quizzes, and intuitive practice tools in both Bangla and English, empowering users to build foundational Japanese skills efficiently and confidently.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive Design</span>
-                    </div>
-                    <a href="https://rotonvai.github.io/learnn5bd" class="project-link" aria-label="View Japanese N5 Language Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Banking Website</h3>
-                    <p>This simulated banking web app delivers a polished, user‑friendly interface for essential financial tasks. Users can log in securely, view account details, make transactions, and check history—all wrapped in a responsive design that adapts seamlessly across devices. Built with a focus on usability and visual clarity, it employs intuitive navigation and real‑time feedback to create a realistic banking experience ideal for demonstrating front‑end development and UI/UX skills.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">Security</span>
-                        <span class="tech-tag">UI/UX</span>
-                    </div>
-                    <a href="https://rotonvai.github.io/Durgapur-City-Bank" class="project-link" aria-label="View Banking Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Business Calculation</h3>
-                    <p>This responsive calculator enables entrepreneurs to input revenue, costs, and margins to instantly compute profits. Built with user experience in mind, it features clear labels, real‑time results, and a clean, minimalist interface optimized for desktop and mobile.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">Security</span>
-                        <span class="tech-tag">UI/UX</span>
-                    </div>
-                    <a href="https://rotonvai.github.io/Business_cal" class="project-link" aria-label="View Banking Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Search Engine</h3>
-                    <p>This responsive search engine mimics familiar layout while focusing on speed and simplicity. Users can type queries to retrieve relevant results instantly, with clear typography and intuitive navigation. Built for efficiency, it features clean UI, minimal distractions, and seamless performance across devices, ensuring an optimal experience for everyday searching.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>
+        <!-- Course Roadmap Infographic Section -->
+        <section id="course-roadmap" style="background: #0f172a; padding: 0; margin: 0; position: relative; overflow: hidden;">
+            <div style="max-width: 900px; margin: 0 auto; padding: 4rem 1rem 2rem 1rem; position: relative; z-index: 1;">
+                <!-- Heading -->
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <h1 style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(90deg,#00fff0,#00d4ff,#00ff94); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; letter-spacing: -1px;">
+                        What Are The Specialties Of AlfaaX project?
+                    </h1>
+                    <p style="font-size: 1.15rem; color: #b5eaff; margin-top: 1rem;">
                         
-                        <span class="tech-tag">UI/UX</span>
+                    </p>
+                </div>
+                <!-- Steps -->
+                <div style="position: relative;">
+                    <!-- Step 1 -->
+                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
+                            <!-- SVG: Community -->
+                            <img src="project image/Infographic-for-JLPT-Tests.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Japanese N5 Language
+                                </span>
+                                <span style="color: #00d4ff; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    Educational
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Exclusive N5Stu Community</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                Wrapped in a clean, mobile-friendly interface, this web app helps Bangladeshi learners tackle JLPT N5 Japanese—from hiragana and essential Kanji to core grammar and vocab. It offers bite‑sized lessons, quizzes, and intuitive practice tools in both Bangla and English, empowering users to build foundational Japanese skills efficiently and confidently.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit N5Stu
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#00d4ff" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
                     </div>
-                    <a href="https://rotonvai.github.io/x-search-engine" class="project-link" aria-label="View Banking Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Tic-Tac-Toe Game</h3>
-                    <p>This polished web-based Tic-Tac-Toe game offers a clean, minimalist interface with real-time logic, automatic win/draw detection, and score tracking for a competitive experience. Built with HTML, CSS, and JavaScript, it features dynamic UI updates, smooth animations, and full responsiveness across desktop and mobile devices.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">Game</span>
-                        <span class="tech-tag">UI/UX</span>
+                    <!-- Step 2 -->
+                    <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
+                            <!-- SVG: Live Class -->
+                            <img src="project image/bank.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00ff94,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Banking Website
+                                </span>
+                                <span style="color: #00ff94; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    business management
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Interactive Banking Management</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                This simulated banking web app delivers a polished, user‑friendly interface for essential financial tasks. Users can log in securely, view account details, make transactions, and check history—all wrapped in a responsive design that adapts seamlessly across devices. Built with a focus on usability and visual clarity, it employs intuitive navigation and real‑time feedback to create a realistic banking experience ideal for demonstrating front‑end development and UI/UX skills.
+                            </p>
+                             <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit Banking Management
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#00ff94" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
                     </div>
-                    <a href="https://rotonvai.github.io/Tic-Tac-Toe" class="project-link" aria-label="View Game Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Note</h3>
-                    <p>AlFAA Note leverages AI to instantly generate structured notes from text or media, speeding learning with clear, organized summaries.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>                        
-                        <span class="tech-tag">UI/UX</span>
+                    <!-- Step 3 -->
+                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
+                            <!-- SVG: Recorded -->
+                            <img src="project image/bussness menegment.jpeg" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#ffd600,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Business Calculation
+                                </span>
+                                <span style="color: #ffd600; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    business management
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Access to business management</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                This responsive calculator enables entrepreneurs to input revenue, costs, and margins to instantly compute profits. Built with user experience in mind, it features clear labels, real‑time results, and a clean, minimalist interface optimized for desktop and mobile.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit Business Calculation
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#ffd600" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
                     </div>
-                    <a href="https://rotonvai.github.io/AlFAA-Note/" class="project-link" aria-label="View Game Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>To-Do List</h3>
-                    <p>The website "To-Do List" by Roton offers a clean and interactive interface for users to add, edit, and delete tasks. It's a great tool for organizing daily activities, improving productivity, and staying focused with an easy-to-use layout.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>
-                 
+                    <!-- Step 4 -->
+                    <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
+                            <!-- SVG: Assignment -->
+                            <img src="project image/search.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00d4ff,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Search Engine
+                                </span>
+                                <span style="color: #00d4ff; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    IT sector
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">multinational corporation and technology</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                This responsive search engine mimics familiar layout while focusing on speed and simplicity. Users can type queries to retrieve relevant results instantly, with clear typography and intuitive navigation. Built for efficiency, it features clean UI, minimal distractions, and seamless performance across devices, ensuring an optimal experience for everyday searching.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit Search Engine
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#00d4ff" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
                     </div>
-                    <a href="https://rotonvai.github.io/To-Do_list/" class="project-link" aria-label="View Game Website project">View Project →</a>
-                </article>
-                <article class="project-card fade-in" role="listitem">
-                    <h3>Magic Cursor</h3>
-                    <p>The "Magic Cursor" website by Roton showcases a creative and visually engaging cursor effect that follows user movement with animation. It's a fun and interactive project demonstrating CSS and JavaScript skills, perfect for enhancing modern web UI experiences.</p>
-                    <div class="tech-tags" aria-label="Technologies used">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">UI/UX</span>
+                    <!-- Step 5 -->
+                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
+                            <!-- SVG: Project -->
+                            <img src="project image/tic tac toe.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00ff94,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Tic-Tac-Toe
+                                </span>
+                                <span style="color: #00ff94; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    Game
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Real-World Games</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                This polished web-based Tic-Tac-Toe game offers a clean, minimalist interface with real-time logic, automatic win/draw detection, and score tracking for a competitive experience. Built with HTML, CSS, and JavaScript, it features dynamic UI updates, smooth animations, and full responsiveness across desktop and mobile devices.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit Tic-Tac-Toe Game
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#00ff94" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
                     </div>
-                    <a href="https://rotonvai.github.io/Magic_Cursor/" class="project-link" aria-label="View Game Website project">View Project →</a>
-                </article>
+                    <!-- Step 6 -->
+                    <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
+                            <!-- SVG: Support -->
+                            <img src="project image/note.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00d4ff,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Note
+                                </span>
+                                <span style="color: #00d4ff; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    Support
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Mentor notes Support</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                               AlFAAX Note leverages AI to instantly generate structured notes from text or media, speeding learning with clear, organized summaries.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit Notes
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#ffd600" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Step 7 -->
+                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
+                            <!-- SVG: Certificate -->
+                            <img src="project image/to-do.jpg" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#ffd600,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    To-Do List
+                                </span>
+                                <span style="color: #ffd600; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    support
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">To-Do list of Completion</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                The website "To-Do List" by Roton offers a clean and interactive interface for users to add, edit, and delete tasks. It's a great tool for organizing daily activities, improving productivity, and staying focused with an easy-to-use layout.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit To-Do List
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#00d4ff" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Step 8 -->
+                    <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
+                            <!-- SVG: Freelancing -->
+                            <img src="project image/cursor.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                        </div>
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00d4ff,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Magic Cursor
+                                </span>
+                                <span style="color: #00d4ff; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    animated cursor
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">following animated cursor</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                The "Magic Cursor" website by Roton showcases a creative and visually engaging cursor effect that follows user movement with animation. It's a fun and interactive project demonstrating CSS and JavaScript skills, perfect for enhancing modern web UI experiences.
+                            </p>
+                            <a href="https://n5stu.com" class="cta-button" target="_blank" style="margin-top: 1.5rem; display: inline-block; background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.3s;">
+                                Visit Magic Cursor
+                            </a>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#ffd600" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Step 9 -->
+                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
+                            <!-- SVG: Interview/Preparation -->
+                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                                <ellipse cx="70" cy="120" rx="30" ry="8" fill="#0f172a" opacity="0.5"/>
+                                <rect x="60" y="90" width="20" height="30" rx="6" fill="#00ff94"/>
+                                <circle cx="70" cy="80" r="18" fill="#ffd600"/>
+                                <rect x="80" y="70" width="30" height="10" rx="4" fill="#00d4ff"/>
+                                <rect x="30" y="70" width="30" height="10" rx="4" fill="#00d4ff"/>
+                            </svg>
+                        </div>
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#ffd600,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    Next Project
+                                </span>
+                                <span style="color: #ffd600; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    Preparation
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Coming Soon...</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                                Coming Soon...
+                            </p>
+                        </div>
+                        <div style="position: absolute; left: 50%; bottom: -38px; transform: translateX(-50%); z-index: 2;">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                                <path d="M30 0 C30 40 30 40 30 80" stroke="#ffd600" stroke-width="3" stroke-dasharray="7,7" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Step 10 -->
+                    <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
+                        <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
+                            <!-- SVG: Growth/Success/Next Level -->
+                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                                <ellipse cx="70" cy="120" rx="30" ry="8" fill="#0f172a" opacity="0.5"/>
+                                <rect x="60" y="90" width="20" height="30" rx="6" fill="#00d4ff"/>
+                                <path d="M70 110 L70 60" stroke="#00ff94" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="70" cy="55" r="12" fill="#00ff94"/>
+                                <polygon points="70,35 80,55 60,55" fill="#ffd600"/>
+                                <rect x="65" y="100" width="10" height="18" rx="3" fill="#fff"/>
+                                <!-- Upward arrow for growth -->
+                                <path d="M70 80 L70 60 M70 60 L65 65 M70 60 L75 65" stroke="#00ff94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
+                                <span style="background: linear-gradient(90deg,#00ff94,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
+                                    next project
+                                </span>
+                                <span style="color: #00ff94; font-size: 0.95rem; font-variant: small-caps; letter-spacing: 0.08em;">
+                                    Growth
+                                </span>
+                            </div>
+                            <h3 style="font-size: 1.45rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Coming Soon...</h3>
+                            <p style="color: #b5eaff; font-size: 1.05rem; line-height: 1.7;">
+                               coming soon....
+                            </p>
+                        </div>
+                        <!-- No connecting line after last step -->
+                    </div>
+                </div>
             </div>
         </section>
+            <!-- Decorative background gradients -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+                <div style="position: absolute; top: 0; left: 0; width: 60vw; height: 60vw; background: radial-gradient(circle at 30% 20%, rgba(0,255,255,0.10), transparent 70%);"></div>
+                <div style="position: absolute; bottom: 0; right: 0; width: 60vw; height: 60vw; background: radial-gradient(circle at 70% 80%, rgba(0,255,148,0.10), transparent 70%);"></div>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        
+    </div>
 
         <!-- Services Section -->
         <section id="services" class="section" aria-labelledby="services-heading">
@@ -1207,14 +1490,165 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <p>&copy; 2025 MD Mahfujor Rahman Roton. All rights reserved. Powered by AlfaaX.</p>
+    <footer class="footer" role="contentinfo" style="position:relative; background: #181c2f; border-top: 2px solid #00d4ff; box-shadow: 0 -4px 24px rgba(0,212,255,0.08); overflow:hidden;">
+        <!-- Digital glowing lines background -->
+        <div aria-hidden="true" style="pointer-events:none; position:absolute; inset:0; z-index:0;">
+            <svg width="100%" height="100%" viewBox="0 0 1440 220" preserveAspectRatio="none" style="width:100%;height:100%;display:block;">
+                <defs>
+                    <linearGradient id="glowLine1" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.7"/>
+                        <stop offset="100%" stop-color="#9f8eff" stop-opacity="0.2"/>
+                    </linearGradient>
+                    <linearGradient id="glowLine2" x1="0" y1="1" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#fff" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.1"/>
+                    </linearGradient>
+                    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="6" result="blur"/>
+                        <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <!-- Main glowing lines -->
+                <polyline points="0,180 180,160 400,200 700,140 1000,180 1200,130 1440,170"
+                    fill="none" stroke="url(#glowLine1)" stroke-width="2.5"
+                    filter="url(#glow)" opacity="0.7"/>
+                <polyline points="0,210 250,180 600,210 900,160 1200,200 1440,180"
+                    fill="none" stroke="url(#glowLine2)" stroke-width="2"
+                    filter="url(#glow)" opacity="0.5"/>
+                <polyline points="0,200 100,170 350,210 600,170 900,200 1200,150 1440,190"
+                    fill="none" stroke="#fff" stroke-width="1.2"
+                    filter="url(#glow)" opacity="0.18"/>
+                <!-- Subtle network nodes -->
+                <circle cx="180" cy="160" r="3" fill="#00d4ff" opacity="0.18"/>
+                <circle cx="700" cy="140" r="2.5" fill="#9f8eff" opacity="0.14"/>
+                <circle cx="1200" cy="130" r="2.5" fill="#fff" opacity="0.12"/>
+                <circle cx="900" cy="160" r="2.5" fill="#00d4ff" opacity="0.13"/>
+            </svg>
+        </div>
+        <div style="position:relative; z-index:1;">
+            <div style="display: flex; justify-content: center; align-items: flex-end; min-height: 220px; ">
+                <p style="font-size:1.1rem; color:#e0e6f7; margin-bottom: 0; letter-spacing: 0.2px; text-align: center;"></p>
+                    &copy; 2025 <span style="color:#00d4ff; font-weight:600;">MD Mahfujor Rahman Roton</span>. All rights reserved.</div>
+                    <span style="font-size:0.98rem; color:#bdb6ff;">Powered by <span style="color:#9f8eff; font-weight:600;">AlfaaX</span>.</span>
+                </p>
+            </div>
+            <div style="margin-top: 1.5rem; text-align: left;">
+                <span style="font-weight:600; color:#00d4ff; font-size:2.08rem;">Pay with</span> <br>
+                <span style="font-weight:600; color:#00d4ff; font-size:1rem;">verified by</span>
+                <span style="border-radius:12px; padding:6px 10px; display:flex; align-items:center;">
+                    <img src="bank/ssl-logo.webp" alt="SSl" title="SSl" style="height:24px;">
+                </span>
+                <div style="
+                    margin-left:12px; 
+                    display: flex; 
+                    flex-direction: column;
+                    gap: 10px 0;
+                    align-items: flex-start;
+                    padding: 12px 0 0 0;
+                ">
+                    <!-- 1st row -->
+                    <div style="display: flex; gap: 18px; align-items: center;">
+                        <span style="background:rgba(0,212,255,0.12); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" title="Visa" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(255,107,107,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(255,107,107,0.07); display:flex; align-items:center;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" title="Mastercard" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(159,142,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(159,142,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/American-Express-Logo-Download-Free-PNG.png" alt="American Express" title="American Express" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(76,205,196,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(76,205,196,0.07); display:flex; align-items:center;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Debit Card" title="Debit Card" style="height:24px; filter: none;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/633/633597.png" alt="Credit Card" title="Credit Card" style="height:24px; filter: none;">
+                        </span>
+                    </div>
+                    <!-- 2nd row -->
+                    <div style="display: flex; gap: 18px; align-items: center;">
+                        <span style="background:rgba(76,205,196,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(76,205,196,0.07); display:flex; align-items:center;">
+                            <img src="bank/Google-Pay-logo-symbol-1.png" alt="Google Pay" title="Google Pay" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(255,107,107,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(255,107,107,0.07); display:flex; align-items:center;">
+                            <img src="bank/BKash-Icon-Logo.wine.svg" alt="bKash" title="bKash" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(255,184,0,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(255,184,0,0.07); display:flex; align-items:center;">
+                            <img src="bank/Nagad-Logo.wine.png" alt="Nagad" title="Nagad" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(69,183,209,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(69,183,209,0.07); display:flex; align-items:center;">
+                            <img src="bank/Rocket-Payment-Integration.png" alt="Rocket" title="Rocket" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(150,206,180,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(150,206,180,0.07); display:flex; align-items:center;">
+                            <img src="bank/Upay_logo.svg.png" alt="Upay" title="Upay" style="height:24px;">
+                        </span>
+                    </div>
+                    <!-- 3rd row -->
+                    <div style="display: flex; gap: 18px; align-items: center;">
+                        <span style="background:rgba(159,142,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(159,142,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/iPay-logo.webp" alt="iPay" title="iPay" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/Bank_Asia_Limited.svg.png" alt="Bank Asia" title="Bank Asia" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(69,183,209,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(69,183,209,0.07); display:flex; align-items:center;">
+                            <img src="bank/Dutch-bangla-bank-ltd.svg.png" alt="Dutch Bangla Bank" title="Dutch Bangla Bank" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/southeast-bank-logo-png_seeklogo-258074.png" alt="Southeast Bank" title="Southeast Bank" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/islami-bank-bangladesh-plc-logo-png_seeklogo-550096.png" alt="Islami Bank" title="Islami Bank" style="height:24px;">
+                        </span>
+                    </div>
+                    <!-- 4th row -->
+                    <div style="display: flex; gap: 18px; align-items: center;">
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/সোনালী_ব্যাংকের_লোগো.svg.png" alt="সোনালী ব্যাংক পিএলসি" title="সোনালী ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/images.png" alt="জনতা ব্যাংক পিএলসি" title="জনতা ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/agrani-bank-limited-logo-png_seeklogo-441688.png" alt="অগ্রণী ব্যাংক পিএলসি" title="অগ্রণী ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/images (1).png" alt="রূপালী ব্যাংক পিএলসি" title="রূপালী ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/images (2).png" alt="বেসিক ব্যাংক পিএলসি" title="বেসিক ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                    </div>
+                    <!-- 5th row -->
+                    <div style="display: flex; gap: 18px; align-items: center;">
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/city-bank-logo-png_seeklogo-263036.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/images (3).png" alt="ন্যাশনাল ব্যাংক লিমিটেড" title="ন্যাশনাল ব্যাংক লিমিটেড" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/png-clipart-ncc-bank-national-credit-and-commerce-bank-limited-bangladesh-bank-commercial-bank-bank-blue-text.png" alt="এনসিসি ব্যাংক পিএলসি" title="এনসিসি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(150,206,180,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(150,206,180,0.07); display:flex; align-items:center;">
+                            <img src="bank/brac_bank.png" alt="ব্র্যাক ব্যাংক পিএলসি" title="ব্র্যাক ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="bank/bangladesh-krishi-bank-logo-png_seeklogo-410048.png" alt="বাংলাদেশ কৃষি ব্যাংক" title="বাংলাদেশ কৃষি ব্যাংক" style="height:24px;">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
         'use strict';
         
         // Utility functions
+        
         const utils = {
             throttle: (func, delay) => {
                 let timeoutId;
@@ -1629,6 +2063,71 @@
                 
             });
         }
+
+        // Responsive layout handling
+        function handleResize() {
+            const isLargeScreen = window.innerWidth >= 1024;
+            
+            // Toggle connecting line
+            document.getElementById('connecting-line').style.display = isLargeScreen ? 'block' : 'none';
+            
+            // Toggle step circles
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`step-circle-${i}`).style.display = isLargeScreen ? 'block' : 'none';
+                document.getElementById(`mobile-step-${i}`).style.display = isLargeScreen ? 'none' : 'flex';
+                document.getElementById(`desktop-label-${i}`).style.display = isLargeScreen ? 'block' : 'none';
+                document.getElementById(`icon-${i}`).style.display = window.innerWidth >= 768 ? 'flex' : 'none';
+                document.getElementById(`curve-${i}`).style.display = isLargeScreen && i < 4 ? 'block' : 'none';
+            }
+            
+            // Adjust step content layout
+            for (let i = 1; i <= 4; i++) {
+                const content = document.getElementById(`step-content-${i}`);
+                if (isLargeScreen) {
+                    if (i % 2 === 0) {
+                        content.style.width = '50%';
+                        content.style.marginLeft = 'auto';
+                        content.style.paddingLeft = '4rem';
+                        content.style.paddingRight = '0';
+                    } else {
+                        content.style.width = '50%';
+                        content.style.marginLeft = '0';
+                        content.style.paddingLeft = '0';
+                        content.style.paddingRight = '4rem';
+                    }
+                } else {
+                    content.style.width = '100%';
+                    content.style.marginLeft = '0';
+                    content.style.paddingLeft = '0';
+                    content.style.paddingRight = '0';
+                }
+            }
+        }
+
+        // Initial setup and event listener
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
+
+        // Intersection observer for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe all step content divs
+            for (let i = 1; i <= 4; i++) {
+                const card = document.getElementById(`step-content-${i}`).firstElementChild;
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            }
+        });
     
     </script>
 </body>
