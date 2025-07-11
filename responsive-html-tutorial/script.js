@@ -283,7 +283,7 @@ class HTMLTutorialApp {
                     <li>VSCode খুলুন এবং একটি নতুন ফাইল তৈরি করুন।</li>
                     <li>ফাইলটি <code>index.html</code> নামে সংরক্ষণ করুন।</li>
                     <li>নিচের কোডটি কপি করে আপনার <code>index.html</code> ফাইলে পেস্ট করুন:</li><br>
-                    <img src="/asset/Hello World!.png" alt="Hello World Code" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                    <img src="./asset/Hello World!.png" alt="Hello World Code" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                     <li>ফাইলটি সংরক্ষণ করুন।</li>
                     <li>আপনার ফাইলটি ব্রাউজারে খুলুন। আপনি এটি VSCode থেকে সরাসরি করতে পারেন। ফাইলটি খুলতে, ফাইলের উপর রাইট ক্লিক করুন এবং "Open with Live Server" নির্বাচন করুন।</li>
                     <li>আপনি যদি Live Server এক্সটেনশন ইনস্টল না করে থাকেন, তাহলে প্রথমে সেটি ইনস্টল করুন। Live Server ইনস্টল করার পর, আপনার ফাইলটি আবার খুলুন।</li>
@@ -296,32 +296,32 @@ class HTMLTutorialApp {
         difficulty: "Beginner",
         body: `
                     <p>একটি HTML ডকুমেন্ট নেস্টেড ট্যাগের একটি সেট ব্যবহার করে গঠন করা হয়। প্রতিটি ট্যাগ <...> কোণ বন্ধনীর মধ্যে আবদ্ধ থাকে এবং কন্টেন্ট বা অন্যান্য HTML ট্যাগের জন্য একটি ধারক হিসেবে কাজ করে। আসুন একটি মৌলিক HTML ডকুমেন্ট কাঠামো দেখে নেওয়া যাক:</p><br>
-                <img src="/asset/content.png" alt="HTML Page Structure" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/content.png" alt="HTML Page Structure" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">A typical HTML page looks like this:</p><br>
-                <img src="/asset/page title.png" alt="HTML Page Structure Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/page title.png" alt="HTML Page Structure Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>Note: These are the essential elements for a basic HTML document:&lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, &lt;body&gt; and more tags</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">DOCTYPE Declaration:</p><br>
-                <img src="/asset/doctype.png" alt="DOCTYPE Declaration" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/doctype.png" alt="DOCTYPE Declaration" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;!DOCTYPE html&gt; ঘোষণা ওয়েব ব্রাউজারকে HTML সংস্করণটি ব্যবহার করার বিষয়ে অবহিত করে। সর্বশেষ সংস্করণটি হল HTML5। কিন্তু যদি ভবিষ্যতে এটি পরিবর্তিত হয় (হয়তো ১০ বছর পরে), তাহলে ডক্টাইপ ঘোষণাটি সহায়ক হবে!</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">HTML root Element:</p><br>
-                <img src="/asset/root element.png" alt="HTML Root Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/root element.png" alt="HTML Root Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;html&gt; ট্যাগ HTML ডকুমেন্টের মূল উপাদান। এটি সমস্ত HTML উপাদানগুলিকে ধারণ করে এবং ব্রাউজারকে জানায় যে এটি একটি HTML ডকুমেন্ট।</p><br>
-                <img src="/asset/root close.png" alt="HTML Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/root close.png" alt="HTML Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;/html&gt; ট্যাগ HTML ডকুমেন্টের সমাপ্তি নির্দেশ করে। এটি ব্রাউজারকে জানায় যে HTML ডকুমেন্টের শেষ হয়েছে।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Head Element:</p><br>
-                <img src="/asset/head.png" alt="Head Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/head.png" alt="Head Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;head&gt; ট্যাগ HTML ডকুমেন্টের মাথের অংশ। এটি মেটাডেটা, শিরোনাম, স্টাইলশীট এবং স্ক্রিপ্টের মতো তথ্য ধারণ করে যা ডকুমেন্টের বিষয়বস্তু নয়।</p><br>
-                <img src="/asset/close head.png" alt="Head Close Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/close head.png" alt="Head Close Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;/head&gt; ট্যাগ HTML ডকুমেন্টের মাথের অংশের সমাপ্তি নির্দেশ করে। এটি ব্রাউজারকে জানায় যে মাথার অংশ শেষ হয়েছে।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Title Element:</p><br>
-                <img src="/asset/title.png" alt="Title Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/title.png" alt="Title Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;title&gt; ট্যাগ HTML ডকুমেন্টের শিরোনাম। এটি ব্রাউজারের ট্যাব বা উইন্ডোতে প্রদর্শিত হয় এবং সার্চ ইঞ্জিনে ওয়েব পৃষ্ঠার শিরোনাম হিসেবে ব্যবহৃত হয়।</p><br>
-                <img src="/asset/title close.png" alt="Title Close Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/title close.png" alt="Title Close Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;/title&gt; ট্যাগ HTML ডকুমেন্টের শিরোনামের সমাপ্তি নির্দেশ করে। এটি ব্রাউজারকে জানায় যে শিরোনাম শেষ হয়েছে।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Body Element:</p><br>
-                <img src="/asset/body.png" alt="Body Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/body.png" alt="Body Element" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;body&gt; ট্যাগ HTML ডকুমেন্টের মূল বিষয়বস্তু। এটি ওয়েব পৃষ্ঠার দৃশ্যমান অংশ ধারণ করে, যেমন টেক্সট, চিত্র, লিঙ্ক এবং অন্যান্য উপাদান।</p><br>
-                <img src="/asset/body close.png" alt="Body Close Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/body close.png" alt="Body Close Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>&lt;/body&gt; ট্যাগ HTML ডকুমেন্টের মূল বিষয়বস্তুর সমাপ্তি নির্দেশ করে। এটি ব্রাউজারকে জানায় যে HTML ডকুমেন্টের বিষয়বস্তু শেষ হয়েছে।</p><br>
                 
                 `,
@@ -333,8 +333,8 @@ class HTMLTutorialApp {
         body: `
                     <p>একটি HTML ট্যাগ কন্টেন্ট বা অন্যান্য HTML ট্যাগের জন্য একটি ধারক হিসেবে কাজ করে। ট্যাগ হল < এবং > কোণ বন্ধনীর মধ্যে আবদ্ধ শব্দ। এগুলি এমন কীওয়ার্ড হিসেবে কাজ করে যা ওয়েব ব্রাউজারকে কন্টেন্ট কীভাবে ফর্ম্যাট এবং প্রদর্শন করতে হয় তা নির্দেশ করে </p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">HTML Tag Structure:</p><br>
-                <img src="/asset/tag structure.png" alt="HTML Tag Structure" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
-                
+                <img src="./asset/tag structure.png" alt="HTML Tag Structure" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Document Structure Tags:</p><br>
                 <ul>
                     <li><code>&lt;doctype&gt;</code> - ডকুমেন্টের প্রকার নির্দেশ করে</li>
@@ -344,7 +344,7 @@ class HTMLTutorialApp {
 
                 </ul><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Metadata Tags:</p><br>
-                <img src="/asset/meta tag.png" alt="Metadata Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/meta tag.png" alt="Metadata Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>মেটা ট্যাগগুলি HTML ডকুমেন্টের মেটা তথ্য ধারণ করে, যেমন পৃষ্ঠার বর্ণনা, কীওয়ার্ড এবং লেখক তথ্য। এগুলি &lt;head&gt; ট্যাগের মধ্যে স্থাপন করা হয় এবং ব্রাউজার বা সার্চ ইঞ্জিন দ্বারা ব্যবহৃত হয়।</p><br>
                 <ul>
                     <li><code>&lt;meta&gt;</code> - মেটা তথ্য ধারণ করে, যেমন পৃষ্ঠার বর্ণনা এবং কীওয়ার্ড।</li>
@@ -352,7 +352,7 @@ class HTMLTutorialApp {
                     <li><code>&lt;title&gt;</code> - পৃষ্ঠার শিরোনাম নির্ধারণ করে যা ব্রাউজারের ট্যাবে প্রদর্শিত হয়।</li>
                 </ul><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Text Formatting Tags:</p><br>
-                <img src="/asset/p tag.jpg" alt="Text Formatting Tags" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/p tag.jpg" alt="Text Formatting Tags" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <ul>
                     <li><code>&lt;p&gt;</code> - প্যারাগ্রাফ তৈরি করে।</li>
                     <li><code>&lt;h1&gt;</code> থেকে <code>&lt;h6&gt;</code> - শিরোনাম তৈরি করে, যেখানে <code>&lt;h1&gt;</code> সবচেয়ে বড় এবং <code>&lt;h6&gt;</code> সবচেয়ে ছোট।</li>
@@ -363,14 +363,14 @@ class HTMLTutorialApp {
                     <li><code>&lt;hr&gt;</code> - একটি অনুভূমিক রেখা তৈরি করে।</li>
                 </ul><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">List Tags:</p><br>
-                <img src="/asset/list tag.jpg" alt="List Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/list tag.jpg" alt="List Tag" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <ul>
                     <li><code>&lt;ul&gt;</code> - অর্ডারহীন তালিকা তৈরি করে।</li>
                     <li><code>&lt;ol&gt;</code> - অর্ডার করা তালিকা তৈরি করে।</li>
                     <li><code>&lt;li&gt;</code> - তালিকার একটি আইটেম তৈরি করে।</li>
                 </ul><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">Hyperlink and Media Tags:</p><br>
-                <img src="/asset/a tag.png" alt="Hyperlink and Media Tags" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/a tag.png" alt="Hyperlink and Media Tags" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <ul>
                     <li><code>&lt;a&gt;</code> - হাইপারলিঙ্ক তৈরি করে।</li>
                     <li><code>&lt;img&gt;</code> - চিত্র অন্তর্ভুক্ত করে।</li>
@@ -420,19 +420,19 @@ class HTMLTutorialApp {
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">What is an HTML Element?</p><br>
                 <p>একটি HTML উপাদান হল একটি সম্পূর্ণ সেট যা একটি শুরু ট্যাগ (অথবা খোলার ট্যাগ), কন্টেন্ট এবং একটি শেষ ট্যাগ (অথবা সমাপনী ট্যাগ) নিয়ে গঠিত।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 18px;  ">HTML Element = Start Tag + Content + End Tag</p><br>
-                <img src="/asset/p1 tag.png" alt="HTML Element Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/p1 tag.png" alt="HTML Element Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>উপরের উদাহরণে, <code>&lt;p&gt;</code> হল একটি প্যারাগ্রাফ উপাদান যা "Hello, World!" টেক্সট ধারণ করে।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">What is a Nested HTML Element?</p><br>
                 
                 <p>নেস্টেড HTML এলিমেন্ট হলো এমন একটি HTML স্ট্রাকচার যেখানে একটি এলিমেন্ট অন্য একটি এলিমেন্টের ভেতরে স্থাপন করা হয়।</p><br>
                 <p>এনক্লোজিং এলিমেন্টকে প্রায়শই "প্যারেন্ট" বলা হয়, যেখানে এনক্লোজিং এলিমেন্টকে "চাইল্ড" বলা হয়।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 18px;  ">Nested HTML Element = One HTML Element Inside Another HTML Element</p><br>
-                <img src="/asset/nested tag.png" alt="Nested HTML Element Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/nested tag.png" alt="Nested HTML Element Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>উপরের উদাহরণে, <code>&lt;strong&gt;</code> ট্যাগটি <code>&lt;p&gt;</code> ট্যাগের মধ্যে নেস্ট করা হয়েছে। এটি "Hello, World!" টেক্সটকে বোল্ড করে।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 30px;  ">What is an Empty HTML Element?</p><br>
                 <p>একটি খালি HTML উপাদান হল এমন একটি উপাদান যার কোন ক্লোজিং ট্যাগ বা কন্টেন্ট থাকে না। এই উপাদানগুলিকে "void elements" বা "self-closing elements" নামেও পরিচিত।</p><br>
                 <p style="font-weight: bold; top: 0; bottom: 0; font-size: 18px;  ">Empty HTML Element = Tags with No Content</p><br>
-                <img src="/asset/empty tag.png" alt="Empty HTML Element Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
+                <img src="./asset/empty tag.png" alt="Empty HTML Element Example" style="width: 100%; height: auto; border-radius: 8px;"><br><br>
                 <p>উপরের উদাহরণে, <code>&lt;br&gt;</code> ট্যাগটি একটি খালি উপাদান। এটি কোন কন্টেন্ট ধারণ করে না এবং একটি ক্লোজিং ট্যাগ প্রয়োজন হয় না।</p><br>
 
                 `,
