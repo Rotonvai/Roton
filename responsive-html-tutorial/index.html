@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial - Learn Web Development</title>
+    <meta name="description" content="Comprehensive HTML tutorial for beginners and advanced developers">
+    <meta name="keywords" content="HTML, tutorial, web development, programming">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>HTML Tutorial</span>
+            </div>
+            <nav class="header-nav">
+                <div class="breadcrumb">
+                    <a href="#" aria-label="Home">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <span class="separator">/</span>
+                    <span>HTML Tutorial</span>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>
+                    <i class="fas fa-book"></i>
+                    Course Content
+                </h2>
+            </div>
+            
+            <nav class="sidebar-nav" role="navigation">
+                <!-- Introduction Section -->
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="introduction" aria-expanded="true">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Introduction</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content expanded" id="introduction">
+                        <li><a href="#" data-content="html-introduction" class="nav-link active">HTML Introduction</a></li>
+                        <li><a href="#" data-content="html-working" class="nav-link">HTML Working</a></li>
+                        <li><a href="#" data-content="html-installation" class="nav-link">HTML Installation</a></li>
+                        <li><a href="#" data-content="html-execution" class="nav-link">HTML Execution</a></li>
+                        <li><a href="#" data-content="html-structure" class="nav-link">HTML Page Structure</a></li>
+                        <li><a href="#" data-content="html-tags" class="nav-link">HTML Tags</a></li>
+                        <li><a href="#" data-content="html-elements" class="nav-link">HTML Elements</a></li>
+                        <li><a href="#" data-content="html-attributes" class="nav-link">HTML Attributes</a></li>
+                        <li><a href="#" data-content="html-comments" class="nav-link">HTML Comments</a></li>
+                        <li><a href="#" data-content="html-id-classes" class="nav-link">HTML Id & Classes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Basic Tags Section -->
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="basic-tags" aria-expanded="false">
+                        <i class="fas fa-tags"></i>
+                        <span>HTML Basic Tags</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="basic-tags">
+                        <li><a href="#" data-content="skeletal-tags" class="nav-link">Skeletal Tags</a></li>
+                        <li><a href="#" data-content="heading-tags" class="nav-link">Heading Tags</a></li>
+                        <li><a href="#" data-content="paragraph-tag" class="nav-link">Paragraph Tag</a></li>
+                        <li><a href="#" data-content="horizontal-line" class="nav-link">Horizontal Line Tag</a></li>
+                        <li><a href="#" data-content="line-break" class="nav-link">Line Break Tag</a></li>
+                        <li><a href="#" data-content="anchor-tag" class="nav-link">Anchor Tag</a></li>
+                        <li><a href="#" data-content="image-tag" class="nav-link">Image Tag</a></li>
+                        <li><a href="#" data-content="pre-tag" class="nav-link">Pre Tag</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="media" aria-expanded="false">
+                        <i class="fas fa-image"></i>
+                        <span>HTML INLINE & BLOCK ELEMENTS</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="media">
+                        <li><a href="#" data-content="html-images" class="nav-link">HTML Inline Elements</a></li>
+                        <li><a href="#" data-content="html-audio" class="nav-link">HTML Block Elements</a></li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Lists Section -->
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="lists" aria-expanded="false">
+                        <i class="fas fa-list"></i>
+                        <span>HTML Lists</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="lists">
+                        <li><a href="#" data-content="html-lists" class="nav-link">HTML Lists</a></li>
+                        <li><a href="#" data-content="unordered-list" class="nav-link">HTML Unordered List</a></li>
+                        <li><a href="#" data-content="ordered-list" class="nav-link">HTML Ordered List</a></li>
+                        <li><a href="#" data-content="definition-lists" class="nav-link">HTML Definition Lists</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tables Section -->
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="tables" aria-expanded="false">
+                        <i class="fas fa-table"></i>
+                        <span>HTML Tables</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="tables">
+                        <li><a href="#" data-content="html-tables" class="nav-link">HTML Tables</a></li>
+                        <li><a href="#" data-content="table-structure" class="nav-link">more on tables</a></li>
+                       
+                    </ul>
+                </div>
+
+            
+
+
+
+                <!-- Forms Section -->
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="forms" aria-expanded="false">
+                        <i class="fas fa-wpforms"></i>
+                        <span>HTML Forms</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="forms">
+                        <li><a href="#" data-content="forms-intro" class="nav-link">Introduction to HTML Forms</a></li>
+                        <li><a href="#" data-content="input-types" class="nav-link">HTML Input Types</a></li>
+                        <li><a href="#" data-content="textarea-select" class="nav-link">Textarea & Select</a></li>
+                        <li><a href="#" data-content="forms-advanced" class="nav-link">More on Forms</a></li>
+                    </ul>
+                </div>
+
+                    <div class="nav-section">
+                <button class="nav-section-header" data-section="HEAD ELEMENTS" aria-expanded="false">
+                    <i class="fas fa-book-open"></i>
+                    <span>HEAD ELEMENTS</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="nav-section-content" id="HEAD ELEMENTS">
+                    <li><a href="#" data-content="HEAD ELEMENTS" class="nav-link">HTML Meta Tags</a></li>
+                    <li><a href="#" data-content="HEAD ELEMENTS" class="nav-link">Link & Script Tags</a></li>
+                </ul>
+            </div>
+
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="advanced" aria-expanded="false">
+                        <i class="fas fa-cogs"></i>
+                        <span>HTML MEDIA</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="advanced">
+                        <li><a href="#" data-content="html-forms-advanced" class="nav-link">Video & Audio Tags</a></li>
+                        <li><a href="#" data-content="html-graphics" class="nav-link">SVG in HTML</a></li>
+                        <li><a href="#" data-content="html-apis" class="nav-link">iFrames in HTML</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <button class="nav-section-header" data-section="Miscellaneous Tags" aria-expanded="false">
+                        <i class="fas fa-book-open"></i>
+                        <span>Miscellaneous Tags</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="nav-section-content" id="Miscellaneous Tags">
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">HTML Code Tag</a></li>
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">HTML Canvas</a></li>
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">HTML Global Attributes</a></li>
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">HTML Entities</a></li>
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">HTML Quotation Tag</a></li>
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">Obsolete HTML Tags</a></li>
+                        <li><a href="#" data-content="Miscellaneous Tags" class="nav-link">Character Sets</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </aside>
+
+       
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <article id="dynamic-content" class="content-article">
+                    <header class="content-header">
+                        <h1>HTML Introduction</h1>
+                        <div class="content-meta">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                5 min read
+                            </span>
+                            <span class="difficulty">
+                                <i class="fas fa-signal"></i>
+                                Beginner
+                            </span>
+                        </div>
+                    </header>
+                    
+                    <div class="content-body">
+                        <p class="lead">HTML (HyperText Markup Language) is the standard markup language for creating web pages and web applications.</p>
+                        
+                        <h2>What is HTML?</h2>
+                        <p>HTML (HyperText Markup Language) was created in 1991 by Tim Berners-Lee. It is a markup language used to create web pages, defining elements like headings, paragraphs, links, and images. HTML forms the backbone of web content.</p>
+                        
+                        <div class="highlight-box">
+                            <h3>Key Features of HTML:</h3>
+                            <ul>
+                                <li>Platform-independent - works across different operating systems</li>
+                                <li>Supports multimedia content (images, videos, audio)</li>
+                                <li>It's a markup language, not a programming language</li>
+                                <li>Can be combined with CSS and JavaScript for interactive web pages</li>
+                            </ul>
+                        </div>
+                        
+                        <h2>Why Learn HTML?</h2>
+                        <p>HTML is the foundation of web development. Understanding HTML is essential for:</p>
+                        <ul>
+                            <li>Creating web pages and websites</li>
+                            <li>Understanding how the web works</li>
+                            <li>Building a foundation for advanced web technologies</li>
+                            <li>Career opportunities in web development</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
