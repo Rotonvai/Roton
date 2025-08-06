@@ -1,0 +1,384 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Ultra-realistic gradients -->
+    <radialGradient id="neonCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="15%" style="stop-color:#00ffff;stop-opacity:0.95">
+        <animate attributeName="stop-color" values="#00ffff;#ff00ff;#ffff00;#00ffff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="40%" style="stop-color:#0099ff;stop-opacity:0.8">
+        <animate attributeName="stop-color" values="#0099ff;#9900ff;#ff9900;#0099ff" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#004499;stop-opacity:0.4">
+        <animate attributeName="stop-color" values="#004499;#990044;#449900;#004499" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#000022;stop-opacity:0.1"/>
+    </radialGradient>
+    
+    <linearGradient id="circleNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00d4ff;#d400ff;#ffd400;#00d4ff" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#4169e1;stop-opacity:0.9">
+        <animate attributeName="stop-color" values="#4169e1;#e14169;#69e141;#4169e1" dur="3.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:0.7">
+        <animate attributeName="stop-color" values="#1e90ff;#ff1e90;#90ff1e;#1e90ff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="squareNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1">
+        <animate attributeName="stop-color" values="#ff0080;#8000ff;#00ff80;#ff0080" dur="2.8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#8000ff;stop-opacity:0.8">
+        <animate attributeName="stop-color" values="#8000ff;#00ff80;#ff8000;#8000ff" dur="3.2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#4000aa;stop-opacity:0.6">
+        <animate attributeName="stop-color" values="#4000aa;#aa4000;#00aa40;#4000aa" dur="3.8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <radialGradient id="intersectionGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="30%" style="stop-color:#00ffaa;stop-opacity:0.9">
+        <animate attributeName="stop-color" values="#00ffaa;#aa00ff;#ffaa00;#00ffaa" dur="2.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="60%" style="stop-color:#0066aa;stop-opacity:0.6">
+        <animate attributeName="stop-color" values="#0066aa;#aa0066;#66aa00;#0066aa" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#001133;stop-opacity:0.2"/>
+    </radialGradient>
+    
+    <!-- Ultra-realistic glow filters -->
+    <filter id="ultraGlow" x="-200%" y="-200%" width="600%" height="600%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="8" result="mediumBlur"/>
+      <feGaussianBlur stdDeviation="3" result="sharpBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="mediumBlur"/>
+        <feMergeNode in="sharpBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="precisionGlow" x="-100%" y="-100%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="5" result="mediumBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="mediumBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleGlow" x="-50%" y="-50%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="crispGlow" x="-30%" y="-30%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main logo structure -->
+  <g transform="translate(400,400)">
+    
+    <!-- Outer energy field -->
+    <circle cx="0" cy="0" r="320" 
+            fill="none" 
+            stroke="url(#circleNeon)" 
+            stroke-width="2"
+            stroke-dasharray="15 8"
+            filter="url(#ultraGlow)"
+            opacity="0.3">
+      <animate attributeName="r" values="320;335;320" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" 
+                        type="rotate" 
+                        values="0;360" 
+                        dur="40s" 
+                        repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Primary circle structure -->
+    <g>
+      <!-- Main circle -->
+      <circle cx="0" cy="0" r="200" 
+              fill="none" 
+              stroke="url(#circleNeon)" 
+              stroke-width="8"
+              filter="url(#precisionGlow)"
+              opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="8;12;8" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Inner circle layer -->
+      <circle cx="0" cy="0" r="160" 
+              fill="url(#neonCore)" 
+              opacity="0.2"
+              filter="url(#subtleGlow)">
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="160;170;160" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Circle detail ring -->
+      <circle cx="0" cy="0" r="140" 
+              fill="none" 
+              stroke="url(#circleNeon)" 
+              stroke-width="4"
+              stroke-dasharray="10 5"
+              filter="url(#subtleGlow)"
+              opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" 
+                          type="rotate" 
+                          values="360;0" 
+                          dur="20s" 
+                          repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Primary square structure -->
+    <g>
+      <!-- Main square -->
+      <rect x="-140" y="-140" width="280" height="280" 
+            fill="none" 
+            stroke="url(#squareNeon)" 
+            stroke-width="8"
+            filter="url(#precisionGlow)"
+            opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="4.5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="8;12;8" dur="4.5s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Inner square layer -->
+      <rect x="-110" y="-110" width="220" height="220" 
+            fill="url(#intersectionGlow)" 
+            opacity="0.15"
+            filter="url(#subtleGlow)">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Square detail frame -->
+      <rect x="-90" y="-90" width="180" height="180" 
+            fill="none" 
+            stroke="url(#squareNeon)" 
+            stroke-width="4"
+            stroke-dasharray="8 4"
+            filter="url(#subtleGlow)"
+            opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" 
+                          type="rotate" 
+                          values="0;360" 
+                          dur="25s" 
+                          repeatCount="indefinite"/>
+      </rect>
+      
+      <animateTransform attributeName="transform" 
+                        type="rotate" 
+                        values="0;360" 
+                        dur="30s" 
+                        repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Intersection elements -->
+    <g opacity="0.8">
+      <!-- Corner intersections -->
+      <circle cx="-99" cy="-99" r="12" 
+              fill="url(#intersectionGlow)" 
+              filter="url(#crispGlow)">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="99" cy="-99" r="12" 
+              fill="url(#intersectionGlow)" 
+              filter="url(#crispGlow)">
+        <animate attributeName="r" values="12;18;12" dur="2.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.3s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="99" cy="99" r="12" 
+              fill="url(#intersectionGlow)" 
+              filter="url(#crispGlow)">
+        <animate attributeName="r" values="12;18;12" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.6s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="-99" cy="99" r="12" 
+              fill="url(#intersectionGlow)" 
+              filter="url(#crispGlow)">
+        <animate attributeName="r" values="12;18;12" dur="2.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.9s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Central fusion core -->
+    <g>
+      <circle cx="0" cy="0" r="50" 
+              fill="url(#neonCore)" 
+              filter="url(#precisionGlow)">
+        <animate attributeName="r" values="50;65;50" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.6;1" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      
+      <rect x="-35" y="-35" width="70" height="70" 
+            fill="none" 
+            stroke="#ffffff" 
+            stroke-width="3"
+            filter="url(#crispGlow)"
+            opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" 
+                          type="rotate" 
+                          values="0;360" 
+                          dur="12s" 
+                          repeatCount="indefinite"/>
+      </rect>
+      
+      <circle cx="0" cy="0" r="25" 
+              fill="none" 
+              stroke="#ffffff" 
+              stroke-width="2"
+              filter="url(#crispGlow)"
+              opacity="0.9">
+        <animate attributeName="r" values="25;30;25" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Energy beam connectors -->
+    <g opacity="0.6">
+      <!-- Diagonal beams -->
+      <line x1="-180" y1="-180" x2="-70" y2="-70" 
+            stroke="url(#intersectionGlow)" 
+            stroke-width="6"
+            filter="url(#subtleGlow)">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="6;10;6" dur="2.5s" repeatCount="indefinite"/>
+      </line>
+      
+      <line x1="180" y1="-180" x2="70" y2="-70" 
+            stroke="url(#intersectionGlow)" 
+            stroke-width="6"
+            filter="url(#subtleGlow)">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.8s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="6;10;6" dur="2.8s" repeatCount="indefinite"/>
+      </line>
+      
+      <line x1="180" y1="180" x2="70" y2="70" 
+            stroke="url(#intersectionGlow)" 
+            stroke-width="6"
+            filter="url(#subtleGlow)">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.1s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="6;10;6" dur="3.1s" repeatCount="indefinite"/>
+      </line>
+      
+      <line x1="-180" y1="180" x2="-70" y2="70" 
+            stroke="url(#intersectionGlow)" 
+            stroke-width="6"
+            filter="url(#subtleGlow)">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.4s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="6;10;6" dur="3.4s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    
+    <!-- Data flow particles -->
+    <g opacity="0.7">
+      <!-- Circular path particles -->
+      <circle r="8" fill="url(#circleNeon)" filter="url(#crispGlow)">
+        <animateMotion dur="8s" repeatCount="indefinite">
+          <path d="M 140,0 A 140,140 0 1,1 -140,0 A 140,140 0 1,1 140,0"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;0" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Square path particles -->
+      <circle r="8" fill="url(#squareNeon)" filter="url(#crispGlow)">
+        <animateMotion dur="10s" repeatCount="indefinite">
+          <path d="M -110,-110 L 110,-110 L 110,110 L -110,110 Z"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="1;0;1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Diagonal particles -->
+      <circle r="6" fill="url(#intersectionGlow)" filter="url(#crispGlow)">
+        <animateMotion dur="6s" repeatCount="indefinite">
+          <path d="M -150,-150 L 150,150 M 150,-150 L -150,150"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Subtle corner accents -->
+    <g opacity="0.4">
+      <!-- HUD-style corners -->
+      <path d="M -250,-200 L -250,-250 L -200,-250" 
+            stroke="url(#circleNeon)" 
+            stroke-width="3" 
+            fill="none"
+            filter="url(#crispGlow)">
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/>
+      </path>
+      
+      <path d="M 200,-250 L 250,-250 L 250,-200" 
+            stroke="url(#squareNeon)" 
+            stroke-width="3" 
+            fill="none"
+            filter="url(#crispGlow)">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+      </path>
+      
+      <path d="M 250,200 L 250,250 L 200,250" 
+            stroke="url(#circleNeon)" 
+            stroke-width="3" 
+            fill="none"
+            filter="url(#crispGlow)">
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/>
+      </path>
+      
+      <path d="M -200,250 L -250,250 L -250,200" 
+            stroke="url(#squareNeon)" 
+            stroke-width="3" 
+            fill="none"
+            filter="url(#crispGlow)">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <!-- Ambient energy particles -->
+    <g opacity="0.3">
+      <circle cx="-300" cy="-150" r="5" fill="#00ffff">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="5;12;5" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="300" cy="-150" r="5" fill="#ff00ff">
+        <animate attributeName="opacity" values="1;0;1" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="5;10;5" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="300" cy="150" r="5" fill="#00ff80">
+        <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="5;11;5" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="-300" cy="150" r="5" fill="#0080ff">
+        <animate attributeName="opacity" values="1;0;1" dur="3.2s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="5;9;5" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+</svg>
