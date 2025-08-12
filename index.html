@@ -70,7 +70,7 @@
             /* background: var(--background-dark); */
            background-color: #000000;
            background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
-
+           cursor: url("cursor.png"), auto;
 
             color: var(--text-primary);
             line-height: 1.6;
@@ -892,6 +892,18 @@
             50% { opacity: 0.5; }
         }
 
+        @media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+  }
+
+  nav {
+    display: none; /* ধরো মোবাইলে ন্যাভ মেনু লুকাবে */
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -1430,7 +1442,7 @@
         </section>
 
         <!-- Course Roadmap Infographic Section -->
-        <section id="course-roadmap" style="background: #0f172a; padding: 0; margin: 0; position: relative; overflow: hidden;">
+        <section id="course-roadmap" style=" padding: 0; margin: 0; position: relative; overflow: hidden;">
             <div style="max-width: 900px; margin: 0 auto; padding: 4rem 1rem 2rem 1rem; position: relative; z-index: 1;">
                 <!-- Heading -->
                 <div style="text-align: center; margin-bottom: 3.5rem;">
@@ -1447,9 +1459,9 @@
                     <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
                             <!-- SVG: Community -->
-                            <img src="project image/Infographic-for-JLPT-Tests.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/Infographic-for-JLPT-Tests.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(5px); transition: background-color 0.3s ease;">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#00d4ff,#00ff94); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Japanese N5 Language
@@ -1476,9 +1488,9 @@
                     <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
                             <!-- SVG: Live Class -->
-                            <img src="project image/bank.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/bank.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#00ff94,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Banking Website
@@ -1505,9 +1517,9 @@
                     <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
                             <!-- SVG: Recorded -->
-                            <img src="project image/bussness menegment.jpeg" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/bussness menegment.jpeg" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#ffd600,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Business Calculation
@@ -1534,9 +1546,9 @@
                     <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
                             <!-- SVG: Assignment -->
-                            <img src="project image/search.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/search.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#00d4ff,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Search Engine
@@ -1563,9 +1575,9 @@
                     <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
                             <!-- SVG: Project -->
-                            <img src="project image/tic tac toe.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/tic tac toe.webp" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#00ff94,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Tic-Tac-Toe
@@ -1592,9 +1604,9 @@
                     <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
                             <!-- SVG: Support -->
-                            <img src="project image/note.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/note.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#00d4ff,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Note
@@ -1621,9 +1633,9 @@
                     <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
                             <!-- SVG: Certificate -->
-                            <img src="project image/to-do.jpg" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/to-do.jpg" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#ffd600,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     To-Do List
@@ -1650,9 +1662,9 @@
                     <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
                             <!-- SVG: Freelancing -->
-                            <img src="project image/cursor.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);">
+                            <!-- <img src="project image/cursor.png" alt="N5Stu Community" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 32px rgba(0,255,255,0.1);"> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#00d4ff,#ffd600); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Magic Cursor
@@ -1679,15 +1691,15 @@
                     <div style="display: flex; flex-direction: row; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-end;">
                             <!-- SVG: Interview/Preparation -->
-                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                            <!-- <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
                                 <ellipse cx="70" cy="120" rx="30" ry="8" fill="#0f172a" opacity="0.5"/>
                                 <rect x="60" y="90" width="20" height="30" rx="6" fill="#00ff94"/>
                                 <circle cx="70" cy="80" r="18" fill="#ffd600"/>
                                 <rect x="80" y="70" width="30" height="10" rx="4" fill="#00d4ff"/>
                                 <rect x="30" y="70" width="30" height="10" rx="4" fill="#00d4ff"/>
-                            </svg>
+                            </svg> -->
                         </div>
-                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
+                        <div style="flex: 2 1 0; margin-left: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative; backdrop-filter: blur(15px);">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
                                 <span style="background: linear-gradient(90deg,#ffd600,#00d4ff); color: #0f172a; font-weight: 700; font-size: 1.1rem; border-radius: 1.5rem; padding: 0.35rem 1.2rem; letter-spacing: 0.1em;">
                                     Next Project
@@ -1711,16 +1723,16 @@
                     <div style="display: flex; flex-direction: row-reverse; align-items: center; margin-top: 2.5rem; position: relative;">
                         <div style="flex: 1 1 0; display: flex; justify-content: flex-start;">
                             <!-- SVG: Growth/Success/Next Level -->
-                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                            <!-- <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
                                 <ellipse cx="70" cy="120" rx="30" ry="8" fill="#0f172a" opacity="0.5"/>
                                 <rect x="60" y="90" width="20" height="30" rx="6" fill="#00d4ff"/>
                                 <path d="M70 110 L70 60" stroke="#00ff94" stroke-width="4" stroke-linecap="round"/>
                                 <circle cx="70" cy="55" r="12" fill="#00ff94"/>
                                 <polygon points="70,35 80,55 60,55" fill="#ffd600"/>
                                 <rect x="65" y="100" width="10" height="18" rx="3" fill="#fff"/>
-                                <!-- Upward arrow for growth -->
+                                 Upward arrow for growth 
                                 <path d="M70 80 L70 60 M70 60 L65 65 M70 60 L75 65" stroke="#00ff94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            </svg> -->
                         </div>
                         <div style="flex: 2 1 0; margin-right: 2.5rem; background: rgba(255,255,255,0.03); border-radius: 1.2rem; padding: 2rem; border: 1.5px solid #1e293b; box-shadow: 0 4px 32px 0 rgba(0,255,255,0.07); position: relative;">
                             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem;">
@@ -1885,6 +1897,12 @@
                     <a href="https://github.com/Rotonvai" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile" role="listitem">
                         <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
+                    <a href="https://www.tiktok.com/@paradoxical_roton" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile" role="listitem">
+                        <i class="fab fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@paradoxical_roton" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile" role="listitem">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
                     <a href="mailto:mdhafizurrmanik@gmail.com" class="social-link" aria-label="Send email" role="listitem">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
@@ -2047,125 +2065,125 @@
                     <!-- 2nd row -->
                     <div style="display: flex; gap: 18px; align-items: center;">
                         <span style="background:rgba(76,205,196,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(76,205,196,0.07); display:flex; align-items:center;">
-                            <img src="bank/Google-Pay-logo-symbol-1.png" alt="Google Pay" title="Google Pay" style="height:24px;">
+                            <img src="./bank/Google-Pay-logo-symbol-1.png" alt="Google Pay" title="Google Pay" style="height:24px;">
                         </span>
                         <span style="background:rgba(255,107,107,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(255,107,107,0.07); display:flex; align-items:center;">
-                            <img src="bank/BKash-Icon-Logo.wine.svg" alt="bKash" title="bKash" style="height:24px;">
+                            <img src="./bank/BKash-Icon-Logo.wine.svg" alt="bKash" title="bKash" style="height:24px;">
                         </span>
                         <span style="background:rgba(255,184,0,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(255,184,0,0.07); display:flex; align-items:center;">
-                            <img src="bank/Nagad-Logo.wine.png" alt="Nagad" title="Nagad" style="height:24px;">
+                            <img src="./bank/Nagad-Logo.wine.png" alt="Nagad" title="Nagad" style="height:24px;">
                         </span>
                         <span style="background:rgba(69,183,209,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(69,183,209,0.07); display:flex; align-items:center;">
-                            <img src="bank/Rocket-Payment-Integration.png" alt="Rocket" title="Rocket" style="height:24px;">
+                            <img src="./bank/Rocket-Payment-Integration.png" alt="Rocket" title="Rocket" style="height:24px;">
                         </span>
                         <span style="background:rgba(150,206,180,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(150,206,180,0.07); display:flex; align-items:center;">
-                            <img src="bank/Upay_logo.svg.png" alt="Upay" title="Upay" style="height:24px;">
+                            <img src="./bank/Upay_logo.svg.png" alt="Upay" title="Upay" style="height:24px;">
                         </span>
                     </div>
                     <!-- 3rd row -->
                     <div style="display: flex; gap: 18px; align-items: center;">
                         <span style="background:rgba(159,142,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(159,142,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/iPay-logo.webp" alt="iPay" title="iPay" style="height:24px;">
+                            <img src="./bank/iPay-logo.webp" alt="iPay" title="iPay" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/Bank_Asia_Limited.svg.png" alt="Bank Asia" title="Bank Asia" style="height:24px;">
+                            <img src="./bank/Bank_Asia_Limited.svg.png" alt="Bank Asia" title="Bank Asia" style="height:24px;">
                         </span>
                         <span style="background:rgba(69,183,209,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(69,183,209,0.07); display:flex; align-items:center;">
-                            <img src="bank/Dutch-bangla-bank-ltd.svg.png" alt="Dutch Bangla Bank" title="Dutch Bangla Bank" style="height:24px;">
+                            <img src="./bank/Dutch-bangla-bank-ltd.svg.png" alt="Dutch Bangla Bank" title="Dutch Bangla Bank" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/southeast-bank-logo-png_seeklogo-258074.png" alt="Southeast Bank" title="Southeast Bank" style="height:24px;">
+                            <img src="./bank/southeast-bank-logo-png_seeklogo-258074.png" alt="Southeast Bank" title="Southeast Bank" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/islami-bank-bangladesh-plc-logo-png_seeklogo-550096.png" alt="Islami Bank" title="Islami Bank" style="height:24px;">
+                            <img src="./bank/islami-bank-bangladesh-plc-logo-png_seeklogo-550096.png" alt="Islami Bank" title="Islami Bank" style="height:24px;">
                         </span>
                     </div>
                     <!-- 4th row -->
                     <div style="display: flex; gap: 18px; align-items: center;">
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/সোনালী_ব্যাংকের_লোগো.svg.png" alt="সোনালী ব্যাংক পিএলসি" title="সোনালী ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/সোনালী_ব্যাংকের_লোগো.svg.png" alt="সোনালী ব্যাংক পিএলসি" title="সোনালী ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/images.png" alt="জনতা ব্যাংক পিএলসি" title="জনতা ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/images.png" alt="জনতা ব্যাংক পিএলসি" title="জনতা ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/agrani-bank-limited-logo-png_seeklogo-441688.png" alt="অগ্রণী ব্যাংক পিএলসি" title="অগ্রণী ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/agrani-bank-limited-logo-png_seeklogo-441688.png" alt="অগ্রণী ব্যাংক পিএলসি" title="অগ্রণী ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/images (1).png" alt="রূপালী ব্যাংক পিএলসি" title="রূপালী ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/images (1).png" alt="রূপালী ব্যাংক পিএলসি" title="রূপালী ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/images (2).png" alt="বেসিক ব্যাংক পিএলসি" title="বেসিক ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/images (2).png" alt="বেসিক ব্যাংক পিএলসি" title="বেসিক ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                     </div>
                     <!-- 5th row -->
                     <div style="display: flex; gap: 18px; align-items: center;">
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/city-bank-logo-png_seeklogo-263036.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/city-bank-logo-png_seeklogo-263036.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/images (3).png" alt="ন্যাশনাল ব্যাংক লিমিটেড" title="ন্যাশনাল ব্যাংক লিমিটেড" style="height:24px;">
+                            <img src="./bank/images (3).png" alt="ন্যাশনাল ব্যাংক লিমিটেড" title="ন্যাশনাল ব্যাংক লিমিটেড" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/png-clipart-ncc-bank-national-credit-and-commerce-bank-limited-bangladesh-bank-commercial-bank-bank-blue-text.png" alt="এনসিসি ব্যাংক পিএলসি" title="এনসিসি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/png-clipart-ncc-bank-national-credit-and-commerce-bank-limited-bangladesh-bank-commercial-bank-bank-blue-text.png" alt="এনসিসি ব্যাংক পিএলসি" title="এনসিসি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(150,206,180,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(150,206,180,0.07); display:flex; align-items:center;">
-                            <img src="bank/brac_bank.png" alt="ব্র্যাক ব্যাংক পিএলসি" title="ব্র্যাক ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/brac_bank.png" alt="ব্র্যাক ব্যাংক পিএলসি" title="ব্র্যাক ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/bangladesh-krishi-bank-logo-png_seeklogo-410048.png" alt="বাংলাদেশ কৃষি ব্যাংক" title="বাংলাদেশ কৃষি ব্যাংক" style="height:24px;">
+                            <img src="./bank/bangladesh-krishi-bank-logo-png_seeklogo-410048.png" alt="বাংলাদেশ কৃষি ব্যাংক" title="বাংলাদেশ কৃষি ব্যাংক" style="height:24px;">
                         </span>
                         
                     </div>
                     <div style="display: flex; gap: 18px; align-items: center;">
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/ab.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/ab.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/Logo_of_Eastern_Bank_(Bangladesh).svg.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/Logo_of_Eastern_Bank_(Bangladesh).svg.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/jamuna bank.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/jamuna bank.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/1742096712_prime-bank-logo.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/1742096712_prime-bank-logo.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/Meghna-bank_Ltd.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
-                        </span>
-                    </div>
-                    <div style="display: flex; gap: 18px; align-items: center;">
-                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/Mercantile-Bank-inaugurates-3-sub-branches_Web.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
-                        </span>
-                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/mutual bank.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
-                        </span>
-                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/aib.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
-                        </span>
-                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/fsib.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
-                        </span>
-                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/icb.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/Meghna-bank_Ltd.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                     </div>
                     <div style="display: flex; gap: 18px; align-items: center;">
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/shahjalal_1.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/Mercantile-Bank-inaugurates-3-sub-branches_Web.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/citybank.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/mutual bank.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/hsbc.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/aib.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/standard.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/fsib.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                         <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
-                            <img src="bank/woori.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                            <img src="./bank/icb.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                    </div>
+                    <div style="display: flex; gap: 18px; align-items: center;">
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="./bank/shahjalal_1.jpg" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="./bank/citybank.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="./bank/hsbc.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="./bank/standard.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
+                        </span>
+                        <span style="background:rgba(0,212,255,0.10); border-radius:12px; padding:6px 10px; box-shadow:0 2px 8px rgba(0,212,255,0.07); display:flex; align-items:center;">
+                            <img src="./bank/woori.png" alt="সিটি ব্যাংক পিএলসি" title="সিটি ব্যাংক পিএলসি" style="height:24px;">
                         </span>
                     </div>
                 </div>
@@ -2837,6 +2855,11 @@
                 observer.observe(card);
             }
         });
+
+        if (window.matchMedia("(pointer: fine)").matches) {
+    // ডেস্কটপ ইউজার
+    document.body.style.cursor = "url('custom-cursor.png'), auto";
+  }
     
     </script>
 </body>
