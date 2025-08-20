@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="icon" href="clogo.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --primary-dark: #0f3460;
+            --background-dark: #0a0a0a;
+            --background-card: rgba(255, 255, 255, 0.05);
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border-color: rgba(0, 212, 255, 0.2);
+            --shadow-primary: rgba(0, 212, 255, 0.3);
+            --gradient-primary: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 15px;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+            
+        }
+
+       ::-webkit-scrollbar {
+            width: 12px;
+        }   
+
+    ::-webkit-scrollbar-track {
+  background: #050a1f;
+}
+
+    ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #00ff00, #75f375, #a5fda5, #e3ffe3); /* Neon green to black */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #00ff00, #c9ffc9);
+}
+
+   /* Base Styles */
+:root {
+    --primary-color: #0A2463;
+    --secondary-color: #FFD700;
+    --accent-color: #3E92CC;
+    --dark-color: #1A1A2E;
+    --light-color: #F8F9FA;
+    --text-color: #333;
+    --text-light: #777;
+    --white: #fff;
+    --black: #000;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --primary-color: #0E4749;
+    --secondary-color: #FFD700;
+    --accent-color: #A5C4D4;
+    --dark-color: #F8F9FA;
+    --light-color: #1A1A2E;
+    --text-color: #f1f1f1;
+    --text-light: #ccc;
+    --white: #121212;
+    --black: #f1f1f1;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    transition: var(--transition);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    color: var(--secondary-color);
+    transform: rotate(30deg);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(10, 36, 99, 0.8), rgba(62, 146, 204, 0.8)), url('./assets/JHS.png') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+.hero .btn {
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll i {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.search-box input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.certificate-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.certificate-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.certificate-card:hover .certificate-img img {
+    transform: scale(1.1);
+}
+
+.certificate-info {
+    padding: 20px;
+}
+
+.certificate-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.certificate-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.certificate-category {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.about .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.timeline-container {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.timeline-item {
+    position: relative;
+    width: calc(50% - 40px);
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -60px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -60px;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.timeline-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-about .logo {
+    color: var(--white);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.footer-about p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-image {
+    height: 400px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-details {
+    padding: 30px;
+}
+
+.modal-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    font-weight: 600;
+    min-width: 100px;
+    color: var(--primary-color);
+}
+
+.detail-value {
+    color: var(--text-color);
+}
+
+.modal-description {
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about .container {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        order: -1;
+        margin-bottom: 40px;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 40px);
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: -60px;
+    }
+    
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        align-self: flex-start;
+    }
+    
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modal-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: var(--transition);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: -40px;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .filter-controls {
+        gap: 5px;
+    }
+    
+    .filter-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-details {
+        padding: 20px;
+    }
+    
+    .modal-details h3 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+         <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">My<span>Achievements</span></a>
+            <div class="nav-links">
+                <a href="index.html">Back to HOME</a>
+                <a href="#home">Home</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+           
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>My Academic Journey</h1>
+                <p>Certificates and honors earned through dedication and hard work</p>
+                <a href="#certificates" class="btn">View Certificates</a>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title">My Certificates</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="leadership">Leadership</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search certificates...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="certificate-grid">
+                <!-- Certificates will be added dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About My Journey</h2>
+                <p>Throughout my academic career, I've pursued excellence in both curricular and extracurricular activities. Each certificate represents not just an achievement, but a story of perseverance and growth.</p>
+                <p>From academic honors to leadership roles and sports accomplishments, this collection showcases my diverse skills and commitment to personal development.</p>
+                <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="20">0</span>
+                    <span class="stat-label">Certificates</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+            </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Academic journey">
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">Achievement Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-items">
+                    <!-- Timeline items will be added dynamically via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#home" class="logo">My<span>Achievements</span></a>
+                    <p>Showcasing my academic and extracurricular accomplishments through the years.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Back to Home</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> My Achievements. MD Mahfujor Rahman Roton. All rights reserved.Powered by <span style="color:#9f8eff; font-weight:600;">AlfaaX</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certificate-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-certificate-img" src="" alt="Certificate">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-certificate-title"></h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Issued by:</span>
+                        <span id="modal-certificate-issuer" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date:</span>
+                        <span id="modal-certificate-date" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Category:</span>
+                        <span id="modal-certificate-category" class="detail-value"></span>
+                    </div>
+                    <p id="modal-certificate-description" class="modal-description"></p>
+                    <div class="modal-actions">
+                        <a href="#" id="download-btn" class="btn" download>Download</a>
+                        <button id="print-btn" class="btn">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+    
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.querySelector('i').className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.querySelector('i').className = 'fas fa-bars';
+        });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // Certificate Data (Replace with your actual certificates)
+    // Certificate Data (20 certificates)
+const certificates = [
+    {
+        id: 1,
+        title: "Coding Excellence Award",
+        issuer: "simpliLearn",
+        date: "August 2025",
+        category: "other",
+        description: "Awarded for Coding beyond limits, achieving excellence in every project completed.",
+        image: "./certificate/certificate1.png"
+    },
+    {
+        id: 2,
+        title: "certificate of participation",
+        issuer: "Dhaka Robotics Club",
+        date: "March 2023",
+        category: "sports",
+        description: "certificate of participation of Bangladesh Robotics Championship 2023.",
+        image: "./certificate/certificate2.png"
+    },
+    {
+        id: 3,
+        title: "sheikh Russell certificate",
+        issuer: "Manikjong DC Office",
+        date: "October 2023",
+        category: "presentation",
+        description: "Recognized for outstanding presentation skills as the Student Council President for 2022-23.",
+        image: "./certificate/certificate3.jpg"
+    },
+    {
+        id: 4,
+        title: "Science Fair - 1st Prize",
+        issuer: "National Science Foundation",
+        date: "February 2023",
+        category: "academic",
+        description: "Won first prize in the national science fair for innovative project on solar energy solutions.",
+        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 5,
+        title: "Debate Competition - Best Speaker",
+        issuer: "Literary Club",
+        date: "November 2022",
+        category: "other",
+        description: "Awarded best speaker in the inter-school debate competition on technology in education.",
+        image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 6,
+        title: "Mathematics Olympiad Gold Medal",
+        issuer: "National Math Association",
+        date: "January 2023",
+        category: "academic",
+        description: "Gold medal winner in the national mathematics olympiad competition.",
+        image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 7,
+        title: "Perfect Attendance Award",
+        issuer: "ABC School",
+        date: "May 2023",
+        category: "other",
+        description: "Recognized for perfect attendance throughout the academic year 2022-23.",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 8,
+        title: "Cricket Tournament MVP",
+        issuer: "District Sports Authority",
+        date: "December 2022",
+        category: "sports",
+        description: "Most Valuable Player in the inter-school cricket tournament.",
+        image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 9,
+        title: "English Literature Award",
+        issuer: "ABC School",
+        date: "March 2023",
+        category: "academic",
+        description: "Top performer in English literature for the academic year.",
+        image: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 10,
+        title: "Community Service Recognition",
+        issuer: "City Council",
+        date: "January 2023",
+        category: "leadership",
+        description: "Recognized for 100+ hours of community service in local initiatives.",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 11,
+        title: "Computer Science Excellence",
+        issuer: "ABC School",
+        date: "May 2023",
+        category: "academic",
+        description: "Top performer in computer science and programming courses.",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 12,
+        title: "Chess Tournament Champion",
+        issuer: "State Chess Federation",
+        date: "October 2022",
+        category: "sports",
+        description: "State-level chess tournament champion in the under-18 category.",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 13,
+        title: "School Band Leader",
+        issuer: "ABC School Music Department",
+        date: "April 2023",
+        category: "other",
+        description: "Recognition for leadership in the school band and music program.",
+        image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 14,
+        title: "Physics Olympiad Silver Medal",
+        issuer: "National Science Association",
+        date: "February 2023",
+        category: "academic",
+        description: "Silver medal winner in the national physics olympiad competition.",
+        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 15,
+        title: "Environmental Club President",
+        issuer: "ABC School",
+        date: "September 2022",
+        category: "leadership",
+        description: "Leadership recognition for initiatives in environmental conservation.",
+        image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 16,
+        title: "Creative Writing Award",
+        issuer: "Literary Society",
+        date: "November 2022",
+        category: "academic",
+        description: "First prize in the national creative writing competition.",
+        image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 17,
+        title: "Football Team Captain",
+        issuer: "ABC School Sports Department",
+        date: "August 2022",
+        category: "sports",
+        description: "Recognition as team captain of the school football team.",
+        image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 18,
+        title: "Robotics Competition Winner",
+        issuer: "National Tech Association",
+        date: "March 2023",
+        category: "academic",
+        description: "First place in the national high school robotics competition.",
+        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 19,
+        title: "Peer Tutoring Recognition",
+        issuer: "ABC School",
+        date: "December 2022",
+        category: "leadership",
+        description: "Recognized for outstanding peer tutoring in mathematics and science.",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        id: 20,
+        title: "Art Exhibition Winner",
+        issuer: "State Art Council",
+        date: "May 2023",
+        category: "other",
+        description: "First prize in the state-level high school art exhibition.",
+        image: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    }
+];
+    
+
+// Timeline Data (Derived from certificates)
+    const timelineData = certificates.map(cert => ({
+        title: cert.title,
+        date: cert.date,
+        description: cert.description
+    })).sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    // Display Certificates
+    const certificateGrid = document.querySelector('.certificate-grid');
+    
+    function displayCertificates(filter = 'all', searchTerm = '') {
+        certificateGrid.innerHTML = '';
+        
+        const filteredCerts = certificates.filter(cert => {
+            const matchesFilter = filter === 'all' || cert.category === filter;
+            const matchesSearch = cert.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                                 cert.issuer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                 cert.description.toLowerCase().includes(searchTerm.toLowerCase());
+            return matchesFilter && matchesSearch;
+        });
+        
+        if (filteredCerts.length === 0) {
+            certificateGrid.innerHTML = '<p class="no-results">No certificates found. Try a different search or filter.</p>';
+            return;
+        }
+        
+        filteredCerts.forEach(cert => {
+            const certCard = document.createElement('div');
+            certCard.className = 'certificate-card';
+            certCard.setAttribute('data-category', cert.category);
+            certCard.innerHTML = `
+                <div class="certificate-img">
+                    <img src="${cert.image}" alt="${cert.title}">
+                </div>
+                <div class="certificate-info">
+                    <h3>${cert.title}</h3>
+                    <div class="certificate-meta">
+                        <span>${cert.issuer}</span>
+                        <span>${cert.date}</span>
+                    </div>
+                    <span class="certificate-category">${cert.category}</span>
+                </div>
+            `;
+            
+            certCard.addEventListener('click', () => openModal(cert));
+            certificateGrid.appendChild(certCard);
+        });
+    }
+    
+    // Filter Certificates
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const filter = button.getAttribute('data-filter');
+            const searchTerm = document.getElementById('search-input').value;
+            displayCertificates(filter, searchTerm);
+        });
+    });
+    
+    // Search Certificates
+    const searchInput = document.getElementById('search-input');
+    
+    searchInput.addEventListener('input', () => {
+        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+        const searchTerm = searchInput.value;
+        displayCertificates(activeFilter, searchTerm);
+    });
+    
+    // Display Timeline
+    const timelineContainer = document.querySelector('.timeline-items');
+    
+    function displayTimeline() {
+        timelineContainer.innerHTML = '';
+        
+        timelineData.forEach((item, index) => {
+            const timelineItem = document.createElement('div');
+            timelineItem.className = 'timeline-item';
+            timelineItem.innerHTML = `
+                <div class="timeline-date">${item.date}</div>
+                <h3 class="timeline-title">${item.title}</h3>
+                <p>${item.description}</p>
+            `;
+            timelineContainer.appendChild(timelineItem);
+        });
+    }
+    
+    // Certificate Modal
+    const modal = document.getElementById('certificate-modal');
+    const closeModalBtn = document.querySelector('.close-modal');
+    
+    function openModal(certificate) {
+        document.getElementById('modal-certificate-img').src = certificate.image;
+        document.getElementById('modal-certificate-title').textContent = certificate.title;
+        document.getElementById('modal-certificate-issuer').textContent = certificate.issuer;
+        document.getElementById('modal-certificate-date').textContent = certificate.date;
+        document.getElementById('modal-certificate-category').textContent = certificate.category;
+        document.getElementById('modal-certificate-description').textContent = certificate.description;
+        document.getElementById('download-btn').href = certificate.image;
+        
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Print Certificate
+    document.getElementById('print-btn').addEventListener('click', () => {
+        window.print();
+    });
+    
+    // Animate Stats
+    function animateStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const updateStat = () => {
+                current += step;
+                if (current < target) {
+                    stat.textContent = Math.floor(current);
+                    requestAnimationFrame(updateStat);
+                } else {
+                    stat.textContent = target;
+                }
+            };
+            
+            updateStat();
+        });
+    }
+    
+    // Initialize
+    displayCertificates();
+    displayTimeline();
+    
+    // Animate stats when scrolled to
+    const aboutSection = document.querySelector('.about');
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateStats();
+            observer.unobserve(aboutSection);
+        }
+    }, { threshold: 0.5 });
+    
+    observer.observe(aboutSection);
+    
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>
+    </nav>
+</body>
+</html>
